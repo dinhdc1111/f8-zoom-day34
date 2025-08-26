@@ -4,6 +4,11 @@ html {
 
 a {
   text-decoration: none;
+  color: #000;
+}
+
+i {
+  color: #ff571a;
 }
 
 .btn {

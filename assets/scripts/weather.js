@@ -1,5 +1,7 @@
-const h1 = <h1>Hello</h1>;
+const App = () => {
+  
+};
 
 const domNode = document.querySelector("#root");
 const root = ReactDOM.createRoot(domNode);
-root.render(h1);
+root.render(<App />);

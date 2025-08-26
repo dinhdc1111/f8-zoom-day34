@@ -1,0 +1,24 @@
+.main-wrapper {
+  margin-left: 30px;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 20px 0;
+  color: #ff571a;
+}
+
+.parent-title-text {
+  font-weight: 600;
+  color: #ff571a;
+}
+
+.parent-title,
+.child-item {
+  line-height: 30px;
+}
+
+.child-list {
+  margin-left: 30px;
+}
