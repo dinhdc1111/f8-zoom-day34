@@ -43,4 +43,5 @@ a {
 .btn-footer {
   display: inline-block;
   margin-top: 32px;
+  font-size: 1rem;
 }

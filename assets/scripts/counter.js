@@ -1,5 +1,9 @@
-const ButtonCounter = ({ handleClick, children }) => {
-  return <button className="btn" onClick={handleClick}>{children}</button>;
+const ButtonCounter = ({ handleClick, children, className }) => {
+  return (
+    <button className={`${className} btn`} onClick={handleClick}>
+      {children}
+    </button>
+  );
 };
 
 const getClassByCount = (count) => {
@@ -18,16 +22,21 @@ const App = () => {
   return (
     <>
       <section className="counter-app">
-        <h1 className={`${getClassByCount(count)} result`}>{count}</h1>
+        <h1 className="counter-app-title">Counter App</h1>
+        <div className={`${getClassByCount(count)} result`}>{count}</div>
         <div className="controls">
-          <ButtonCounter handleClick={handleIncrement}>Tăng (+1)</ButtonCounter>
-          <ButtonCounter handleClick={handleDecrement}>Giảm (-1)</ButtonCounter>
+          <ButtonCounter className="btn-positive" handleClick={handleIncrement}>
+            Increase (+1)
+          </ButtonCounter>
+          <ButtonCounter className="btn-negative" handleClick={handleDecrement}>
+            Decrease (-1)
+          </ButtonCounter>
           <ButtonCounter handleClick={handleReset}>Reset (0)</ButtonCounter>
         </div>
       </section>
       <footer className="footer">
         <div className="btn-footer">
-          <a href="/">Quay về trang chủ</a>
+          <a href="/">Back to Home</a>
         </div>
       </footer>
     </>
