@@ -1,3 +1,46 @@
-h1 {
-  color: red;
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 90px;
+  padding: 0 16px;
+  margin: 0 16px;
+  background: #1677ff;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  height: 32px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  user-select: none;
+}
+
+.btn-primary {
+  background: #1677ff;
+}
+
+.btn-danger {
+  background: #ff4d4f;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.footer {
+  text-align: center;
+}
+
+.btn-footer {
+  display: inline-block;
+  margin-top: 32px;
 }

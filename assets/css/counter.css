@@ -1,0 +1,19 @@
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.zero {
+  color: gray;
+}
+
+.counter-app {
+  text-align: center;
+}
+
+.counter-app .result {
+  font-size: 12rem;
+}
