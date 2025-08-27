@@ -60,7 +60,7 @@ const App = () => {
         </div>
         <div className="todo-list">
           {todos.length === 0 ? (
-            <div className="todo-item empty-task">Chưa có task nào. Hãy thêm task đầu tiên!</div>
+            <div className="todo-item empty-task">😆 Chưa có task nào. Hãy thêm task đầu tiên nào! </div>
           ) : (
             todos.map((todo) => (
               <TodoItem key={todo.id} todo={todo} handleRemove={handleRemove} handleChecked={handleChecked} />
