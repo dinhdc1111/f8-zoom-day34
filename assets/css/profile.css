@@ -1,0 +1,83 @@
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.profile-app-title {
+  font-size: 3rem;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+.profile-card {
+  width: 320px;
+  height: 450px;
+  border-radius: 32px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.profile-card-top {
+  position: relative;
+  height: 40%;
+  border-radius: 32px 32px 0 0;
+  background-color: rgb(39, 119, 247);
+  background-image: url('https://files.fullstack.edu.vn/f8-prod/banners/Banner_web_ReactJS.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+
+.avatar {
+  position: absolute;
+  left: 50%;
+  bottom: -70%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 5px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background: rgba(55, 55, 55, 0.06);
+}
+
+.avatar img,
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.avatar-placeholder {
+  background-color: #eaeaea;
+}
+
+.profile-card-bottom {
+  padding-top: 80px;
+}
+
+.info-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.info-user {
+  padding-left: 20px;
+}
+
+.info-user-item {
+  margin: 0 25px 14px;
+}
+
+.skeleton {
+  min-width: 20px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+}

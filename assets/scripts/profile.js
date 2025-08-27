@@ -1,5 +1,92 @@
+const Skeleton = ({ width }) => {
+  return <div className="skeleton" style={{ width }}></div>;
+};
+
 const App = () => {
-  
+  const [user, setUser] = React.useState({});
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users/1")
+      .then((response) => response.json())
+      .then((json) => {
+        // Fake delay network 3s
+        setTimeout(() => {
+          setUser(json);
+          setLoading(false);
+        }, 3000);
+      });
+  }, []);
+
+  return (
+    <div className="profile-wrapper">
+      <h1 className="profile-app-title">Profile Card</h1>
+      <section className="profile-card">
+        <div className="profile-card-top">
+          <div className="avatar">
+            {loading ? (
+              <div className="avatar-placeholder"></div>
+            ) : (
+              <img
+                src="https://yt3.googleusercontent.com/Pa8wyxqTOkhu5DW_RvkiQIS7Bsa7OW7gSen-2WpaQsC2EqUAkgubAg1_QPc951pzpN2F2Q4_TA=s900-c-k-c0x00ffffff-no-rj"
+                alt="F8"
+                width={150}
+                height={150}
+              />
+            )}
+          </div>
+        </div>
+        <section className="profile-card-bottom">
+          <div className="info-name">{loading ? <Skeleton width="200px" /> : `${user.name} (${user.username})`}</div>
+          <div className="info-user-list">
+            <div className="info-user-item">
+              {loading ? (
+                <Skeleton width="100%" />
+              ) : (
+                <>
+                  <i className="fa-solid fa-envelope"></i> {user.email}
+                </>
+              )}
+            </div>
+            <div className="info-user-item">
+              {loading ? (
+                <Skeleton width="100%" />
+              ) : (
+                <>
+                  <i className="fa-solid fa-phone"></i> {user.phone}
+                </>
+              )}
+            </div>
+            <div className="info-user-item">
+              {loading ? (
+                <Skeleton width="100%" />
+              ) : (
+                <>
+                  <i className="fa-solid fa-globe"></i> {user.website}
+                </>
+              )}
+            </div>
+            <div className="info-user-item">
+              {loading ? (
+                <Skeleton width="100%" />
+              ) : (
+                <>
+                  <i className="fa-solid fa-location-dot"></i> {user?.address?.street} - {user?.address?.city}
+                </>
+              )}
+            </div>
+          </div>
+        </section>
+      </section>
+      <footer className="footer">
+        <div className="btn-footer">
+          <a href="/">
+            <i className="fa-solid fa-house"></i> Back to Home
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 const domNode = document.querySelector("#root");
