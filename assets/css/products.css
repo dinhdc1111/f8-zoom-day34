@@ -1,0 +1,116 @@
+.products-app-title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 30px 0;
+  font-weight: 500;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 32px;
+  padding: 32px;
+}
+
+.products-card {
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.products-card-id,
+.products-card-user {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  color: #fff;
+  background: #ff571a;
+  margin-right: 6px;
+}
+
+.products-card-user {
+  background-color: #2db7f5;
+}
+
+.products-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 12px 0;
+  height: 60px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.products-card-body {
+  font-size: 0.875rem;
+  height: 60px;
+  color: #555;
+}
+
+.btn-detail {
+  margin: 0;
+  width: 100%;
+}
+
+.product-card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.btn-close {
+  margin: 0;
+  float: right;
+}
+
+.skeleton-item {
+  height: 367px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* ========= Popup ========= */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-overlay .products-card-title,
+.popup-overlay .products-card-body {
+  height: 100%;
+}

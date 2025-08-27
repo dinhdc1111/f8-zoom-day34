@@ -43,6 +43,13 @@ a {
 
 .btn-footer {
   display: inline-block;
-  margin-top: 32px;
+  margin: 32px 0;
   font-size: 1rem;
+}
+
+.skeleton {
+  min-width: 20px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
 }
