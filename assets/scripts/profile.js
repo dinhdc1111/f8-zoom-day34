@@ -1,5 +1,5 @@
-const Skeleton = ({ width }) => {
-  return <div className="skeleton" style={{ width }}></div>;
+const Skeleton = ({ width, height = 16 }) => {
+  return <div className="skeleton" style={{ width, height }}></div>;
 };
 
 const App = () => {
@@ -22,22 +22,22 @@ const App = () => {
     <div className="profile-wrapper">
       <h1 className="profile-app-title">Profile Card</h1>
       <section className="profile-card">
-        <div className="profile-card-top">
+        <section className="profile-card-top">
           <div className="avatar">
             {loading ? (
               <div className="avatar-placeholder"></div>
             ) : (
               <img
                 src="https://yt3.googleusercontent.com/Pa8wyxqTOkhu5DW_RvkiQIS7Bsa7OW7gSen-2WpaQsC2EqUAkgubAg1_QPc951pzpN2F2Q4_TA=s900-c-k-c0x00ffffff-no-rj"
-                alt="F8"
+                alt={user.name || 'Avatar'}
                 width={150}
                 height={150}
               />
             )}
           </div>
-        </div>
+        </section>
         <section className="profile-card-bottom">
-          <div className="info-name">{loading ? <Skeleton width="200px" /> : `${user.name} (${user.username})`}</div>
+          <div className="info-name">{loading ? <Skeleton width="200px" height="26px" /> : `${user.name} (${user.username})`}</div>
           <div className="info-user-list">
             <div className="info-user-item">
               {loading ? (
@@ -81,7 +81,7 @@ const App = () => {
       <footer className="footer">
         <div className="btn-footer">
           <a href="index.html">
-            <i class="fa-solid fa-backward"></i> Back to Home
+            <i className="fa-solid fa-backward"></i> Back to Home
           </a>
         </div>
       </footer>
