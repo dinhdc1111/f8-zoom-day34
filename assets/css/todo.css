@@ -1,0 +1,103 @@
+.todo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.todo-app-title {
+  font-size: 3rem;
+  margin: 30px 0;
+  font-weight: 500;
+}
+
+.todo-card {
+  width: 500px;
+  max-height: 450px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-statistics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 32px;
+  font-weight: 500;
+}
+
+.todo-list {
+  flex: 1;
+  padding: 32px;
+  overflow-x: hidden;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 100%;
+  margin-bottom: 16px;
+  height: 64px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+
+.todo-item-content {
+  flex: 1;
+}
+
+.task-item-done {
+  background: antiquewhite;
+  text-decoration: line-through;
+}
+
+.btn-delete i {
+  color: #ff4d4f;
+}
+
+.form-add-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  width: 100%;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.add-task-input {
+  flex: 1;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  padding: 5px 16px;
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.btn-add-task {
+  margin: 0;
+}
+
+.empty-task {
+  color: #9f9f9f;
+}
+
+.total-tasks {
+  color: #333;
+}
+
+.completed-tasks {
+  color: #4caf50;
+}
+
+.remaining-tasks {
+  color: #ff9800;
+}

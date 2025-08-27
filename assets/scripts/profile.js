@@ -44,7 +44,8 @@ const App = () => {
                 <Skeleton width="100%" />
               ) : (
                 <>
-                  <i className="fa-solid fa-envelope"></i> {user.email}
+                  <i className="fa-solid fa-envelope"></i>
+                  <span>{user.email}</span>
                 </>
               )}
             </div>
@@ -53,7 +54,8 @@ const App = () => {
                 <Skeleton width="100%" />
               ) : (
                 <>
-                  <i className="fa-solid fa-phone"></i> {user.phone}
+                  <i className="fa-solid fa-phone"></i>
+                  <span>{user.phone}</span>
                 </>
               )}
             </div>
@@ -62,7 +64,8 @@ const App = () => {
                 <Skeleton width="100%" />
               ) : (
                 <>
-                  <i className="fa-solid fa-globe"></i> {user.website}
+                  <i className="fa-solid fa-globe"></i>
+                  <span>{user.website}</span>
                 </>
               )}
             </div>
@@ -71,7 +74,8 @@ const App = () => {
                 <Skeleton width="100%" />
               ) : (
                 <>
-                  <i className="fa-solid fa-location-dot"></i> {user?.address?.street} - {user?.address?.city}
+                  <i className="fa-solid fa-location-dot"></i>
+                  <span>{user?.address?.street} - {user?.address?.city}</span>
                 </>
               )}
             </div>

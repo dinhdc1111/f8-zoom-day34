@@ -23,7 +23,7 @@
   position: relative;
   height: 40%;
   border-radius: 32px 32px 0 0;
-  background-color: rgb(39, 119, 247);
+  background-color: #2777f7;
   background-image: url('https://files.fullstack.edu.vn/f8-prod/banners/Banner_web_ReactJS.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -74,6 +74,16 @@
 
 .info-user-item {
   margin: 0 25px 14px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.info-user-item i {
+  text-align: center;
+  width: 16px;
+  height: 16px;
+  color: #2777f7;
 }
 
 .skeleton {
