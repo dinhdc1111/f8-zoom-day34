@@ -2,6 +2,5 @@ const App = () => {
   
 };
 
-const domNode = document.querySelector("#root");
-const root = ReactDOM.createRoot(domNode);
+const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(<App />);

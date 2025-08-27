@@ -6,10 +6,10 @@ const ButtonCounter = ({ handleClick, children, className }) => {
   );
 };
 
-const getClassByCount = (count) => {
-  if (count > 0) return "positive";
-  if (count < 0) return "negative";
-  return "zero";
+const getInfoCountApp = (count) => {
+  if (count > 0) return { classNameByCount: "positive", labelName: "Dương" };
+  if (count < 0) return { classNameByCount: "negative", labelName: "Âm" };
+  return { classNameByCount: "zero", labelName: "Bằng không" };
 };
 
 const App = () => {
@@ -19,30 +19,36 @@ const App = () => {
   const handleDecrement = () => setCount((preState) => preState - 1);
   const handleReset = () => setCount(0);
 
+  const { classNameByCount, labelName } = getInfoCountApp(count);
+
   return (
     <>
       <section className="counter-app">
         <h1 className="counter-app-title">Counter App</h1>
-        <div className={`${getClassByCount(count)} result`}>{count}</div>
+        <div className={`${classNameByCount} result`}>{count}</div>
+        <div className={`${classNameByCount} counter-app-label`}>{labelName}</div>
         <div className="controls">
-          <ButtonCounter className="btn-positive" handleClick={handleIncrement}>
-            <i class="fa-solid fa-plus"></i> Increase
-          </ButtonCounter>
           <ButtonCounter className="btn-negative" handleClick={handleDecrement}>
             <i class="fa-solid fa-minus"></i> Decrease
           </ButtonCounter>
-          <ButtonCounter handleClick={handleReset}><i class="fa-solid fa-rotate"></i> Reset</ButtonCounter>
+          <ButtonCounter handleClick={handleReset}>
+            <i class="fa-solid fa-rotate"></i> Reset
+          </ButtonCounter>
+          <ButtonCounter className="btn-positive" handleClick={handleIncrement}>
+            <i class="fa-solid fa-plus"></i> Increase
+          </ButtonCounter>
         </div>
       </section>
       <footer className="footer">
         <div className="btn-footer">
-          <a href="/"><i className="fa-solid fa-house"></i> Back to Home</a>
+          <a href="../../index.html">
+            <i class="fa-solid fa-backward"></i> Back to Home
+          </a>
         </div>
       </footer>
     </>
   );
 };
 
-const domNode = document.querySelector("#root");
-const root = ReactDOM.createRoot(domNode);
+const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(<App />);

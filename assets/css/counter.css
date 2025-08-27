@@ -25,7 +25,13 @@
 .counter-app-title {
   font-size: 3rem;
   margin-top: 30px;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.counter-app-label {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .counter-app .result {

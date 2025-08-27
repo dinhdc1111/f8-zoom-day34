@@ -10,11 +10,11 @@ const App = () => {
     fetch("https://jsonplaceholder.typicode.com/users/1")
       .then((response) => response.json())
       .then((json) => {
-        // Fake delay network 3s
+        // Test delay network 2s
         setTimeout(() => {
           setUser(json);
           setLoading(false);
-        }, 3000);
+        }, 2000);
       });
   }, []);
 
@@ -80,8 +80,8 @@ const App = () => {
       </section>
       <footer className="footer">
         <div className="btn-footer">
-          <a href="/">
-            <i className="fa-solid fa-house"></i> Back to Home
+          <a href="../../index.html">
+            <i class="fa-solid fa-backward"></i> Back to Home
           </a>
         </div>
       </footer>
@@ -89,6 +89,5 @@ const App = () => {
   );
 };
 
-const domNode = document.querySelector("#root");
-const root = ReactDOM.createRoot(domNode);
+const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(<App />);
