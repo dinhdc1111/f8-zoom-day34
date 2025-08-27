@@ -41,7 +41,7 @@ const App = () => {
       </section>
       <footer className="footer">
         <div className="btn-footer">
-          <a href="../../index.html">
+          <a href="index.html">
             <i class="fa-solid fa-backward"></i> Back to Home
           </a>
         </div>
