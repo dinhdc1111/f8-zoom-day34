@@ -6,7 +6,7 @@ const ButtonCounter = ({ handleClick, children, className }) => {
   );
 };
 
-const getInfoCountApp = (count) => {
+const getInfoCounter = (count) => {
   if (count > 0) return { classNameByCount: "positive", labelName: "Dương" };
   if (count < 0) return { classNameByCount: "negative", labelName: "Âm" };
   return { classNameByCount: "zero", labelName: "Bằng không" };
@@ -19,7 +19,7 @@ const App = () => {
   const handleDecrement = () => setCount((preState) => preState - 1);
   const handleReset = () => setCount(0);
 
-  const { classNameByCount, labelName } = getInfoCountApp(count);
+  const { classNameByCount, labelName } = getInfoCounter(count);
 
   return (
     <>
@@ -29,13 +29,13 @@ const App = () => {
         <div className={`${classNameByCount} counter-app-label`}>{labelName}</div>
         <div className="controls">
           <ButtonCounter className="btn-negative" handleClick={handleDecrement}>
-            <i class="fa-solid fa-minus"></i> Decrease
+            <i className="fa-solid fa-minus"></i> Decrease
           </ButtonCounter>
           <ButtonCounter handleClick={handleReset}>
-            <i class="fa-solid fa-rotate"></i> Reset
+            <i className="fa-solid fa-rotate"></i> Reset
           </ButtonCounter>
           <ButtonCounter className="btn-positive" handleClick={handleIncrement}>
-            <i class="fa-solid fa-plus"></i> Increase
+            <i className="fa-solid fa-plus"></i> Increase
           </ButtonCounter>
         </div>
       </section>
