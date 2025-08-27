@@ -9,32 +9,32 @@ const App = () => {
         </h2>
         <div className="child-list">
           <div className="child-item">
-            <a href="../../pages/counter.html">
+            <a href="../counter.html">
               <i className="fa-regular fa-file"></i> Bài tập 1 - Counter App
             </a>
           </div>
           <div className="child-item">
-            <a href="../../pages/counter.html">
+            <a href="../todo.html">
               <i className="fa-regular fa-file"></i> Bài tập 2 - Todo List App
             </a>
           </div>
           <div className="child-item">
-            <a href="../../pages/counter.html">
+            <a href="../profile.html">
               <i className="fa-regular fa-file"></i> Bài tập 3 - Profile Card
             </a>
           </div>
           <div className="child-item">
-            <a href="../../pages/counter.html">
+            <a href="../products.html">
               <i className="fa-regular fa-file"></i> Bài tập 4 - Product List
             </a>
           </div>
           <div className="child-item">
-            <a href="../../pages/counter.html">
+            <a href="../comments.html">
               <i className="fa-regular fa-file"></i> Bài tập 5 - Comment System
             </a>
           </div>
           <div className="child-item">
-            <a href="../../pages/counter.html">
+            <a href="../weather.html">
               <i className="fa-regular fa-file"></i> Bài tập 6 - Weather App
             </a>
           </div>

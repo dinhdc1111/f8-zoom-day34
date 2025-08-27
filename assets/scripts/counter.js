@@ -26,17 +26,17 @@ const App = () => {
         <div className={`${getClassByCount(count)} result`}>{count}</div>
         <div className="controls">
           <ButtonCounter className="btn-positive" handleClick={handleIncrement}>
-            Increase (+1)
+            <i class="fa-solid fa-plus"></i> Increase
           </ButtonCounter>
           <ButtonCounter className="btn-negative" handleClick={handleDecrement}>
-            Decrease (-1)
+            <i class="fa-solid fa-minus"></i> Decrease
           </ButtonCounter>
-          <ButtonCounter handleClick={handleReset}>Reset (0)</ButtonCounter>
+          <ButtonCounter handleClick={handleReset}><i class="fa-solid fa-rotate"></i> Reset</ButtonCounter>
         </div>
       </section>
       <footer className="footer">
         <div className="btn-footer">
-          <a href="/">Back to Home</a>
+          <a href="/"><i className="fa-solid fa-house"></i> Back to Home</a>
         </div>
       </footer>
     </>
