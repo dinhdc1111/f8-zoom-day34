@@ -36,7 +36,7 @@ const SkeletonList = () => {
           <Skeleton width="100%" />
           <Skeleton width="100%" />
           <Skeleton width="100%" />
-          <Skeleton width="100%" height="100%"/>
+          <Skeleton width="100%" height="100%" />
         </div>
       ))}
     </>
@@ -61,6 +61,10 @@ const App = () => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
 
+  const firstLetterUpperCase = (text) => {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
+
   const handleDetailClick = (id) => {
     setIsOpen(true);
     const product = products.find((product) => product.id === id);
@@ -78,7 +82,7 @@ const App = () => {
             products.map((product) => (
               <section className="products-card" key={product.id}>
                 <div className="products-card-id">ID: {product.id}</div>
-                <h2 className="products-card-title">{product.title}</h2>
+                <h2 className="products-card-title">{firstLetterUpperCase(product.title)}</h2>
                 <p className="products-card-body">{truncateBody(product.body, 100)}</p>
                 <img
                   src="https://cdn2.fptshop.com.vn/unsafe/384x0/filters:format(webp):quality(75)/vsp_g2530s3_1_f6f271575e.png"
