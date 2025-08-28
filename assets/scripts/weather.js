@@ -62,7 +62,7 @@ const App = () => {
           <div className="weather-info">
             <h3 className="city-name">{cityData.city}</h3>
             <div>
-              <img src={cityData.icon} alt="Weather Icon" width={150} />
+              <img src={cityData.icon} alt="Weather Icon" width={150} height={150} />
             </div>
             <div className="temperature">{cityData.temp}°C</div>
             <div className="weather-details">
@@ -73,7 +73,7 @@ const App = () => {
                 </div>
               </div>
               <div className="temp-item">
-                <img src={cityData.icon} alt="Weather Icon" width={20} />
+                <img src={cityData.icon} alt="Weather Icon" width={20} height={20} />
                 <div className="temp-content">{cityData.weather}</div>
               </div>
               <div className="temp-item">
@@ -90,7 +90,7 @@ const App = () => {
       <footer className="footer">
         <div className="btn-footer">
           <a href="index.html">
-            <i className="fa-solid fa-backward"></i> Back to Home
+            <i className="fa-solid fa-arrow-left"></i> Quay lại
           </a>
         </div>
       </footer>
